@@ -43,9 +43,8 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 import dialogService from '@/services/dialogService'
-
-import CountersPaneDialog from '@/components/counters/CountersPaneDialog.vue'
 import TradesPaneDialog from '../trades/TradesPaneDialog.vue'
+import CountersPaneDialog from '@/components/counters/CountersPaneDialog.vue'
 import ChartPaneDialog from '../chart/ChartPaneDialog.vue'
 import StatsPaneDialog from '../stats/StatsPaneDialog.vue'
 import PricesPaneDialog from '../prices/PricesPaneDialog.vue'
@@ -124,7 +123,7 @@ export default class extends Vue {
     }
   }
 
-  openSettings() {
+  async openSettings() {
     switch (this.type) {
       case 'counters':
         dialogService.open(CountersPaneDialog, { paneId: this.paneId })

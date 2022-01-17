@@ -331,6 +331,12 @@ const actions = {
       } else {
         el.classList.remove('-large')
       }
+
+      if (zoom < 1) {
+        el.classList.add('-small')
+      } else {
+        el.classList.remove('-small')
+      }
     }
   },
   setupLayout({ state }) {
